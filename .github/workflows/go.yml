@@ -32,7 +32,7 @@ jobs:
       env:
         GOOS: ${{ matrix.goos }}
         GOARCH: ${{ matrix.goarch }}
-      run: go build -v -o hcache ./...
+      run: go build -v -o hcache .
 
     - name: Test
       if: matrix.goarch == 'amd64'
